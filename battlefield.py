@@ -10,10 +10,11 @@ class Battlefield:
         self.display_winner
 
     def display_welcome(self) -> None:
-        # print("Our match begins with ankylosaurus facing off aginst mecha ankylosaurus!")
-        # print("The battle begins in",{self.location})
+        print("Our match begins with ankylosaurus facing off aginst mecha ankylosaurus!")
+        print("The battle begins in",{self.location})
 
     def battle_phase(self) -> None:
+        
 
 
 
