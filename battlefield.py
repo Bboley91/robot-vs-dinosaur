@@ -16,6 +16,7 @@ class Battlefield:
         print("The battle begins in",{self.location})
 
     def battle_phase(self) -> None:
+        self.robot.attack(self.dinosaur)
         
 
 
