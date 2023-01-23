@@ -11,12 +11,13 @@ class Battlefield:
         self.battle_phase()
         self.display_winner()
 
-    def display_welcome(self) -> None:
+    def display_welcome(self):
         print("Our match begins with",{self.dinosaur},"facing off aginst",{self.robot},"!")
         print("The battle begins in",{self.location})
 
     def battle_phase(self) -> None:
         self.robot.attack(self.dinosaur)
+        self.dinosaur.attack(self.robot)
         
 
 
