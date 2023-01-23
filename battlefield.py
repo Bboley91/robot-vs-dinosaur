@@ -5,9 +5,9 @@ class Battlefield:
         self.location = "A crater"
 
     def run_game(self) -> None:
-        self.display_welcome
-        self.battle_phase
-        self.display_winner
+        self.display_welcome()
+        self.battle_phase()
+        self.display_winner()
 
     def display_welcome(self) -> None:
         print("Our match begins with ankylosaurus facing off aginst mecha ankylosaurus!")
