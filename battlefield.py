@@ -23,3 +23,8 @@ class Battlefield:
 
 
     def display_winner(self) -> None:
+        if self.robot.health_points >= 0:
+            print({self.dinosaur}," is the winner!")
+        else:
+            print({self.robot}," is the winner!")
+
