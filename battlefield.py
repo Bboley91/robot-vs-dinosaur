@@ -12,8 +12,8 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-        print("Our match begins with",{self.dinosaur},"facing off aginst",{self.robot},"!")
-        print("The battle begins in",{self.location})
+        print("Our match begins with ankylosaurus facing off against mecha_ankylosaurus!")
+        print("The battle begins in",self.location)
 
     def battle_phase(self):
         while (self.dinosaur.dinosaur_health_points >= 0 and self.robot.robot_health_points >= 0):
@@ -22,7 +22,7 @@ class Battlefield:
             print(f"{self.robot.mecha_ankylosaurus} attacked {self.dinosaur.ankylosaurus} with {self.robot.active_weapon} doing {self.robot.active_weapon.attack_power} damage!")
             self.robot.attack(self.dinosaur)
             print(f"{self.dinosaur.ankylosaurus} attacked {self.robot.mecha_ankylosaurus} doing {self.dinosaur.dinosaur_attack_power} damage!")
-            self.dinosaur.attack(self.robot.mecha_ankylosaurus)
+            self.dinosaur.attack(self.robot)
             if self.dinosaur.dinosaur_health_points != 0:
                 print(f"Mecha ankylosaurus' health is at: {self.robot.robot_health_points}")
                 print(f"Ankylosaurus' health is at: {self.dinosaur.dinosaur_health_points}")
