@@ -16,9 +16,21 @@ class Battlefield:
         print("The battle begins in",{self.location})
 
     def battle_phase(self):
-        self.robot.attack(self.dinosaur)
-        self.dinosaur.attack(self.robot)
-        
+        while (self.dinosaur.dinosaur_health_points >= 0 and self.robot.robot_health_points >= 0):
+            print(f"mecha ankylosaurus' health is at:{self.robot.robot_health_points}")
+            print(f"ankylosaurus' health is at:{self.dinosaur.dinosaur_health_points}")
+            print(f"{self.robot} attacked {self.dinosaur} with {self.robot.active_weapon} doing {self.robot.active_weapon.attack_power} damage!")
+            self.robot.attack(self.dinosaur)
+            print(f"{self.dinosaur} attacked {self.robot} doing {self.dinosaur.dinosaur_attack_power} damage!")
+            self.dinosaur.attack(self.robot)
+            if self.dinosaur.dinosaur_health_points != 0:
+                print(f"Mecha ankylosaurus' health is at: {self.robot.robot_health_points}")
+                print(f"Ankylosaurus' health is at: {self.dinosaur.dinosaur_health_points}")
+                break
+            elif self.robot.robot_health_points != 0:
+                print(f"Mecha ankylosaurus' health is at: {self.robot.robot_health_points}")
+                print(f"Ankylosaurus' health is at: {self.dinosaur.dinosaur_health_points}")
+                break
 
 
 
