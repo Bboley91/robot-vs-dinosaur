@@ -3,8 +3,8 @@ from dinosaur import Dinosaur
 class Battlefield:
     def __init__ (self):
         self.location = "A crater"
-        self.robot = Robot("mecha ankylosaurus")
-        self.dinosaur = Dinosaur("ankylosaurus")
+        self.robot = Robot("mecha ankylosaurus",100)
+        self.dinosaur = Dinosaur("ankylosaurus",125,20)
 
     def run_game(self) -> None:
         self.display_welcome()
