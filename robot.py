@@ -5,5 +5,5 @@ class Robot:
         self.robot_health_points = health_points
         self.active_weapon = Weapon("Hammer Fist", 25)
     def attack(self,dinosaur)-> None:
-        dinosaur.health_points -= self.active_weapon.attack_power
+        dinosaur.dinosaur_health_points -= self.active_weapon.attack_power
         return dinosaur
