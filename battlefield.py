@@ -3,7 +3,7 @@ from dinosaur import Dinosaur
 class Battlefield:
     def __init__ (self):
         self.location = "A crater"
-        self.robot = Robot("mecha ankylosaurus",100)
+        self.robot = Robot("mecha ankylosaurus",100,25)
         self.dinosaur = Dinosaur("ankylosaurus",125,20)
 
     def run_game(self):
@@ -12,8 +12,8 @@ class Battlefield:
         self.display_winner()
 
     def display_welcome(self):
-        print("Our match begins with ankylosaurus facing off against mecha_ankylosaurus!")
-        print("The battle begins in",self.location)
+        print(f"Our match begins with",{self.dinosaur.ankylosaurus},"facing off aginst",{self.robot.mecha_ankylosaurus},"!")
+        print(f"The battle begins in",{self.location})
 
     def battle_phase(self):
         while (self.dinosaur.dinosaur_health_points >= 0 and self.robot.robot_health_points >= 0):
